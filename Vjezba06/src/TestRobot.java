@@ -2,6 +2,7 @@ import Zadatak01.Robot;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 
 public class TestRobot {
     public static void main(String[] args) {
@@ -18,7 +19,6 @@ public class TestRobot {
 //        System.out.println(robi1.compare(robi1,robi2));
         ArrayList<Robot> robots = generateListOfRobots(7);
         System.out.println(robots);
-//        Collections.sort(robots);
 
     }
 
@@ -28,5 +28,18 @@ public class TestRobot {
             robots.add(new Robot());
         }
         return robots;
+    }
+
+    static class RobotBatteryComparator implements Comparator<Robot>{
+
+        @Override
+        public int compare(Robot o1, Robot o2) {
+            return 0;
+        }
+    }
+    private static void changeStatus(ArrayList<Robot> robots){
+        for(Robot robi : robots){
+//            robi.setStatus(true);
+        }
     }
 }
